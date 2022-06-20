@@ -1,5 +1,6 @@
 const clientID = "41fbe6c6b010489993973423e7df3ebf";
-const redirectURI = "http://sivan-jamming.surge.sh";
+// const redirectURI = "http://sivan-jamming.surge.sh";
+const redirectURI = "http://localhost:3000";
 let accessToken;
 
 const Spotify = {
@@ -27,7 +28,7 @@ const Spotify = {
 
     search(term) {
         let accessToken = Spotify.getAccessToken();
-        return fetch(`https://api.spotify.com/v1/search?type=track&q=${term}`, {
+        return fetch(`https://api.spotify.com/v1/search?type=track&market=US&q=${term}`, {
             headers: {
                 Authorization: `Bearer ${accessToken}`
             }
@@ -42,7 +43,9 @@ const Spotify = {
                     name: track.name,
                     artist: track.artists[0].name,
                     album: track.album.name,
-                    uri: track.uri
+                    uri: track.uri,
+                    preview: track.preview_url,
+                    image: track.album.images[0].url
             }));
         });
     },

@@ -1,5 +1,6 @@
 import React from "react";
 import "./Track.css";
+import TrackPreview from "../TrackPreview/TrackPreview";
 
 class Track extends React.Component {
     constructor(props) {
@@ -26,7 +27,8 @@ class Track extends React.Component {
     render() {
         return (
             <div className="Track">
-                <div class="Track-information">
+                <TrackPreview track={this.props.track} />
+                <div className="Track-information">
                     <div className="Track-title">
                       <h3>{this.props.track.name}</h3>
                     </div>
