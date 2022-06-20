@@ -10,7 +10,7 @@
     right: 1.1rem; 
     z-index: 3;
     border-style: solid;
-    border-width: 1.5vw 0 1.5vw 3vw;
+    border-width: 1vw 0 1vw 2vw;
     border-color: transparent transparent transparent #edf6ff;
     pointer-events: none;
     opacity: 0;
@@ -18,12 +18,12 @@
 
 .Track-image:hover + .Preview-overlay {
     opacity: 1;
-    transition: 0.5s;
+    transition: opacity 0.5s;
 }
 
 .Track-image:not(:hover) + .Preview-overlay {
     opacity: 0;
-    transition: 0.5s;
+    transition: opacity 0.5s;
 }
 
 .Track-preview {

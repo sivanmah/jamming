@@ -1,6 +1,6 @@
 const clientID = "41fbe6c6b010489993973423e7df3ebf";
-// const redirectURI = "http://sivan-jamming.surge.sh";
-const redirectURI = "http://localhost:3000";
+const redirectURI = "http://sivan-jamming.surge.sh";
+//const redirectURI = "http://localhost:3000";
 let accessToken;
 
 const Spotify = {
